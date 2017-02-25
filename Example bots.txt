@@ -1,9 +1,0 @@
-example: Please refer to these example bots for a starting point:
-0.9.x
-Recommended Example (C#): https://github.com/Auxes/Discord.Net-Example/tree/0.9 (Auxesis)
-NAudio Sample (C#): https://github.com/DjRand/discordnaudioexample (Rand)
-
-1.0
-Official Example Bot (C#): https://github.com/420foxbot/DiscordExampleBot (foxbot)
-Official Example Bot (VB.Net): https://github.com/420foxbot/DiscordExampleBot.VB (foxbot)
-Discord.Net-Example (C#): https://github.com/Auxes/Discord.Net-Example/tree/1.0 (Auxesis)
