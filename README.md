@@ -1,5 +1,5 @@
 # Bot_Kondono
-Discord bot written in C# using Discord.NET wrapper
+A simple discord bot written in C# using Discord.NET wrapper
 
 HOW TO LAUNCH:
 
