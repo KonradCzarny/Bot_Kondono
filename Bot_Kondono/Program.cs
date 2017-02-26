@@ -25,11 +25,11 @@ namespace Bot_Kondono
         }
        
         // Audio client
-        public static IAudioClient _vClient;
+        private IAudioClient _vClient;
+        private bool playingSong = false;
 
-        // Bool, when playing a song, set it to true
-        private static bool playingSong = false;
-        public static DiscordClient _client;
+
+        private DiscordClient _client;
 
         public void Start()
         {
@@ -62,7 +62,7 @@ namespace Bot_Kondono
             });
         }
 
-        public void CreateCommands()
+        private void CreateCommands()
         {
             //ping
             var cService = _client.GetService<CommandService>();
@@ -137,7 +137,7 @@ namespace Bot_Kondono
 
         }
 
-        public static async Task SendAudio(string filepath, Channel voiceChannel)
+        private async Task SendAudio(string filepath, Channel voiceChannel)
         {
             
         // Using !play command, starts this method
@@ -147,28 +147,28 @@ namespace Bot_Kondono
         try
         {
 
-            var channelCount = _client.GetService<AudioService>().Config.Channels; // Get the number of AudioChannels our AudioService has been configured to use.
-            var OutFormat = new WaveFormat(48000, 16, channelCount); // Create a new Output Format, using the spec that Discord will accept, and with the number of channels that our client supports.
+            var channelCount = _client.GetService<AudioService>().Config.Channels; 
+            var OutFormat = new WaveFormat(48000, 16, channelCount); 
 
-            using (var MP3Reader = new Mp3FileReader(filepath)) // Create a new Disposable MP3FileReader, to read audio from the filePath parameter
-            using (var resampler = new MediaFoundationResampler(MP3Reader, OutFormat)) // Create a Disposable Resampler, which will convert the read MP3 data to PCM, using our Output Format
+            using (var MP3Reader = new Mp3FileReader(filepath)) // Disposable MP3FileReader reading audio from the filePath 
+            using (var resampler = new MediaFoundationResampler(MP3Reader, OutFormat)) // Disposable Resampler converying MP3 data to PCM
             {
-                resampler.ResamplerQuality = 60; // Set the quality of the resampler to 60, the highest quality
-                int blockSize = OutFormat.AverageBytesPerSecond / 50; // Establish the size of our AudioBuffer
+                resampler.ResamplerQuality = 60; 
+                int blockSize = OutFormat.AverageBytesPerSecond / 50; 
                 byte[] buffer = new byte[blockSize];
                 int byteCount;
 
                 // opus.dll and libsodium.dll libraried are needed for this to work
-                while ((byteCount = resampler.Read(buffer, 0, blockSize)) > 0 && playingSong) // Read audio into our buffer, and keep a loop open while data is present
+                while ((byteCount = resampler.Read(buffer, 0, blockSize)) > 0 && playingSong)
                 {
                     if (byteCount < blockSize)
                     {
-                        // Incomplete Frame
+                        
                         for (int i = byteCount; i < blockSize; i++)
                             buffer[i] = 0;
                     }
 
-                    _vClient.Send(buffer, 0, blockSize); // Send the buffer to Discord
+                    _vClient.Send(buffer, 0, blockSize); 
                 }
                 await _vClient.Disconnect();
             }
