@@ -16,11 +16,6 @@ Simply launch a project in visual studio, place your bot token in given place an
 * [Visual Studio 2017](https://www.tts.com.pl/Landing/Visual-Studio-2017-Professional?gclid=EAIaIQobChMI2_HfqqTF1QIVTDwbCh085gtwEAAYASAAEgLyk_D_BwE) - IDE
 * [Discord.Net](https://github.com/RogueException/Discord.Net/tree/dev) - Discord api wrapper
 
-## Contributing
-
-Feel free to use it as a base for further upgrading, or learning example :) 
-
-
 ## Authors
 
 * **Konrad Czarny** - *Initial work* - [Linkedin profile](https://www.linkedin.com/in/konradczarny/)
