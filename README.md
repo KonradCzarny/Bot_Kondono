@@ -1,12 +1,34 @@
-# Bot_Kondono
-A simple discord bot written in C# using Discord.NET wrapper
+# Bot Kondono
 
-HOW TO LAUNCH:
+Simple discord bot written in C# using Discord.Net wrapper.
 
-1. Launch a project in visual studio
-2. Place your Discord bot token in designated place in code
-3. Launch a bot
+## Getting Started
 
-For a list of commands type: !help
+Simply launch a project in visual studio, place your bot token in given place and launch it.
 
-For a command description, type: !help [command]
+### Prerequisites
+
+Visual Studio
+Discord server with administrator privilages
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Built With
+
+* [Visual Studio 2017](https://www.tts.com.pl/Landing/Visual-Studio-2017-Professional?gclid=EAIaIQobChMI2_HfqqTF1QIVTDwbCh085gtwEAAYASAAEgLyk_D_BwE) - IDE
+* [Discord.Net](https://github.com/RogueException/Discord.Net/tree/dev) - Discord api wrapper
+
+## Contributing
+
+Feel free to use it as a base for further upgrading, or learning example :) 
+
+
+## Authors
+
+* **Konrad Czarny** - *Initial work* - [Linkedin profile](https://www.linkedin.com/in/konradczarny/)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
