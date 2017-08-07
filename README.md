@@ -11,10 +11,6 @@ Simply launch a project in visual studio, place your bot token in given place an
 * Visual Studio
 * Discord server with administrator privilages
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
 * [Visual Studio 2017](https://www.tts.com.pl/Landing/Visual-Studio-2017-Professional?gclid=EAIaIQobChMI2_HfqqTF1QIVTDwbCh085gtwEAAYASAAEgLyk_D_BwE) - IDE
