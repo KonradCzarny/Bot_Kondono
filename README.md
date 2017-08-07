@@ -8,8 +8,8 @@ Simply launch a project in visual studio, place your bot token in given place an
 
 ### Prerequisites
 
-Visual Studio
-Discord server with administrator privilages
+* Visual Studio
+* Discord server with administrator privilages
 
 ## Deployment
 
